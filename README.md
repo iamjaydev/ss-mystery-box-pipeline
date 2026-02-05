@@ -146,6 +146,7 @@ Here is the corrected version with **“Enable Developer Options…” moved fro
      python scripts/select_crop_box.py
      ```
 
+   ![OCR crop selection example](screenshots/ocr_crop_example.png)
    - When the screenshot opens, select the region containing the reward text
    - The selected crop region is saved for future runs
 
@@ -156,15 +157,21 @@ Here is the corrected version with **“Enable Developer Options…” moved fro
      python scripts/capture_rewards.py
      ```
 
+     ![OCR crop selection example](screenshots/record_button_tap_example.png)
+     ![OCR crop selection example](screenshots/open_mystery_box_example.png)
+
 5. **Analyze and visualize results**
+   - Run the visualization script with the generated CSV file as input:
 
-   ```
-   python scripts/visualize_results.py
-   ```
+     ```
+     python scripts/visualize_results.py data/rewards_YYYYMMDD_HHMMSS.csv
+     ```
 
-   - Generates summary statistics and plots
+   - Generates summary statistics and plots based on the provided data
+     ![OCR crop selection example](screenshots/plot_example.png)
 
 ## Limitations
 
+- Supported on Android platforms only
 - OCR may be inaccurate; the cleaning script assumes consistent errors and may need adjustments
 - Timing-sensitive: delays, pop-ups, or slow device responses can disrupt automation
