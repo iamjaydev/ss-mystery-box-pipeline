@@ -125,8 +125,9 @@ def analyze_and_plot(cleaned_csv):
     axes[0, 0].pie(
         probs,
         labels=labels,
-        autopct=lambda p: f"{p:.1f}%" if p > 3 else "",
+        autopct=lambda p: f"{p:.1f}%" if p > 4 else "",
         startangle=90,
+        textprops={"fontsize": 6}
     )
     axes[0, 0].set_title("Reward Types")
 
